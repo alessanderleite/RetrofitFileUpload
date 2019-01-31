@@ -1,7 +1,6 @@
 package br.com.alessanderleite.retrofitfileupload;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -65,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 100 && resultCode == RESULT_OK && data != null) {
             //the image URI
             Uri selectedImage = data.getData();
+
+            //calling the upload file method after choosing the file
+            uploadFile(selectedImage, "My Image");
         }
     }
 
