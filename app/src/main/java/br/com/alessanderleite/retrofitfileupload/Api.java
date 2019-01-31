@@ -1,5 +1,6 @@
 package br.com.alessanderleite.retrofitfileupload;
 
+
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Multipart;
@@ -17,5 +18,5 @@ public interface Api {
     //we have tow parameters on is name and other one is description
     @Multipart
     @POST("Api.php?apicall=upload")
-    Call<MyResponse> uploadImage(@Part("image\"; filenam=\"myfile.jpg\" ")RequestBody file, @Part("desc") RequestBody desc);
+    Call<MyResponse> uploadImage(@Part("image\"; filename=\"myfile.jpg\" ")RequestBody file, @Part("desc") RequestBody desc);
 }
